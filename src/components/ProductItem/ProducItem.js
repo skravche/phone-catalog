@@ -11,9 +11,11 @@ class ProductItem extends Component {
         {PhoneData.map((phoneDetails, index) => {
           return (
             <div className="App">
+              <img src="" alt=" " />
               <h2>{phoneDetails.id}</h2>
               <p>{phoneDetails.name}</p>
               <p>{phoneDetails.snippet}</p>
+              <button type="button">Add</button>
             </div>
           );
         })}
