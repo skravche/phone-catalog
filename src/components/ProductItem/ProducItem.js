@@ -1,4 +1,3 @@
-//main App.js
 import './ProductItem.css';
 import React, { Component } from 'react';
 import PhoneData from '../Data/phones.json';
@@ -6,17 +5,24 @@ import PhoneData from '../Data/phones.json';
 class ProductItem extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Phone</h1>
+      <div>
         {PhoneData.map((phoneDetails, index) => {
           return (
-            <div className="App">
-              <img src="" alt=" " />
-              <h2>{phoneDetails.id}</h2>
-              <p>{phoneDetails.name}</p>
-              <p>{phoneDetails.snippet}</p>
-              <button type="button">Add</button>
-            </div>
+            <li className="thumbnail phones">
+              <a href="#/">
+                <img
+                  className="thumb"
+                  src={`https://raw.githubusercontent.com/mate-academy/phone-catalogue-static/master/${
+                    phoneDetails.imageUrl
+                  }`}
+                  alt=" "
+                />
+              </a>
+              <a href="#/">
+                <p>{phoneDetails.name} </p>
+              </a>
+              <p className="ng-binding">{phoneDetails.snippet}</p>
+            </li>
           );
         })}
       </div>

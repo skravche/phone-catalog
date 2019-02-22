@@ -3,8 +3,24 @@
 body {
   padding-top: 20px;
   background-color: lightgoldenrodyellow;
-  margin-left: 20px;
-  padding: 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.sectionleft {
+  border: 1px solid red;
+}
+sectionright {
+  border: 1px solid gray;
 }
 
 .phone-images {
