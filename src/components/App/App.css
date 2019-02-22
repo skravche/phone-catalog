@@ -7,6 +7,9 @@ body {
   background: ffe;
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 
 .main {
   padding: 0 15px;
