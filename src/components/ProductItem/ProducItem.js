@@ -8,12 +8,12 @@ class ProductItem extends Component {
     return (
       <div className="App">
         <h1>Phone</h1>
-        {PhoneData.map((pheneDetails, index) => {
+        {PhoneData.map((phoneDetails, index) => {
           return (
             <div className="App">
-              <h2>{pheneDetails.id}</h2>
-              <p>{pheneDetails.name}</p>
-              <p>{pheneDetails.snippet}</p>
+              <h2>{phoneDetails.id}</h2>
+              <p>{phoneDetails.name}</p>
+              <p>{phoneDetails.snippet}</p>
             </div>
           );
         })}
