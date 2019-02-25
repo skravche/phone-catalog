@@ -1,30 +1,26 @@
 import './ProductItem.css';
 import React, { Component } from 'react';
-import ProductListView from '../ProductListView';
 
 class ProductItem extends Component {
   render() {
-    return (
-      <div className="row">
-        <div className="leftCol">
-          <section>
-            <p>
-              Search: <input type="input" name="search" />
-            </p>
-            <p>
-              Sort by:
-              <select className="selector">
-                <option value="name">Alphabetical</option>
-                <option value="age">Newest</option>
-              </select>
-            </p>
-          </section>
-        </div>
+    const { imageUrl, name, snippet } = this.props;
 
-        <div className="rightCol">
-          <ProductListView />
+    return (
+      <li className="phone-list">
+        <a href="#/">
+          <img
+            className="picphone"
+            src={`https://raw.githubusercontent.com/mate-academy/phone-catalogue-static/master/${imageUrl}`}
+            alt=" "
+          />
+        </a>
+        <div className="phone-text">
+          <a href="#/">
+            <p>{name} </p>
+          </a>
+          <p className="description">{snippet}</p>
         </div>
-      </div>
+      </li>
     );
   }
 }

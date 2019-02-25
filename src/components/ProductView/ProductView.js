@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class ProductViewItem extends Component {
+class ProductView extends Component {
   render() {
     return (
-      <div className="App">
-        <h2> You're in ProductView </h2>
+      <div>
+        <h2> You're in ProductView Page </h2>
       </div>
     );
   }
 }
 
-export default ProductViewItem;
+export default ProductView;
