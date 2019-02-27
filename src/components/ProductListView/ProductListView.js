@@ -20,6 +20,14 @@ class ProductList extends Component {
   };
 
   render() {
+    const filteredTitles = phoneList =>
+      phoneList.name
+        .toLowerCase()
+        .includes(this.state.inPhoneName.toLowerCase()) ||
+      phoneList.snippet
+        .toLowerCase()
+        .includes(this.state.inPhoneName.toLowerCase());
+
     return (
       <div className="wrap">
         <div className="leftCol">
@@ -50,15 +58,7 @@ class ProductList extends Component {
         <div className="rightCol">
           <ul>
             {PhoneData.sort(this.filterItems)
-              .filter(
-                phoneList =>
-                  phoneList.name
-                    .toLowerCase()
-                    .includes(this.state.inPhoneName.toLowerCase()) ||
-                  phoneList.snippet
-                    .toLowerCase()
-                    .includes(this.state.inPhoneName.toLowerCase())
-              )
+              .filter(filteredTitles)
               .map(phoneList => (
                 <ProductItem
                   imageUrl={phoneList.imageUrl}
