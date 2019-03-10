@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PhoneData from '../Data/phones.json';
 import ProductItem from '../ProductItem';
+import phones from '../Data/phones.json';
 
 class ProductList extends Component {
   state = {
@@ -57,13 +57,15 @@ class ProductList extends Component {
         </div>
         <div className="rightCol">
           <ul>
-            {PhoneData.sort(this.filterItems)
+            {phones
+              .sort(this.filterItems)
               .filter(filteredTitles)
               .map(phoneList => (
                 <ProductItem
                   imageUrl={phoneList.imageUrl}
                   name={phoneList.name}
                   snippet={phoneList.snippet}
+                  id={phoneList.id}
                 />
               ))}
           </ul>

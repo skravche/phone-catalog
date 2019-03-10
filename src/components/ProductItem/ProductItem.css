@@ -2,11 +2,9 @@
   display: flex;
   padding: 0 15px;
 }
-
 .leftCol {
   width: 16%;
 }
-
 .rightCol {
   text-decoration: none;
   display: flex;
@@ -20,7 +18,6 @@
 .pname {
   margin-right: 10px;
 }
-
 .phone-list {
   border: 1px solid grey;
   border-radius: 5px;
@@ -38,6 +35,6 @@
   margin-left: 14px;
 }
 .description {
-  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 12px;
 }
