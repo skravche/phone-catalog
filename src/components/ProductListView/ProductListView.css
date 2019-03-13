@@ -1,0 +1,20 @@
+.phone-list {
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 15px 4px 4px 4px;
+  text-decoration: none;
+}
+.picphone {
+  display: block;
+  max-width: 100px;
+  height: auto;
+}
+.phone-text {
+  margin-left: 14px;
+}
+.description {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-size: 12px;
+}

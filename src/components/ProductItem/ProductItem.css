@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+}
+
+.leftCol {
+  width: 16%;
+}
+
+.rightCol {
+  text-decoration: none;
+  display: flex;
+  padding-left: 40px;
+  width: 83.333%;
+}
+.selector {
+  margin-left: 10px;
+}
