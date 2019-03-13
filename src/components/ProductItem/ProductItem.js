@@ -1,30 +1,27 @@
-import './ProductItem.css';
 import React, { Component } from 'react';
-import ProductListView from '../ProductListView';
+import './ProductItem.css';
+import { Link } from 'react-router-dom';
 
 class ProductItem extends Component {
   render() {
+    const { imageUrl, name, snippet, id } = this.props;
+    console.log(id);
     return (
-      <div className="row">
-        <div className="leftCol">
-          <section>
-            <p>
-              Search: <input type="input" name="search" />
-            </p>
-            <p>
-              Sort by:
-              <select className="selector">
-                <option value="name">Alphabetical</option>
-                <option value="age">Newest</option>
-              </select>
-            </p>
-          </section>
+      <li className="phone-list">
+        <Link to={`/${id}`}>
+          <img
+            className="picphone"
+            src={`https://raw.githubusercontent.com/mate-academy/phone-catalogue-static/master/${imageUrl}`}
+            alt=" "
+          />
+        </Link>
+        <div className="phone-text">
+          <Link to={`/${id}`}>
+            <p>{name} </p>
+          </Link>
+          <p className="description">{snippet}</p>
         </div>
-
-        <div className="rightCol">
-          <ProductListView />
-        </div>
-      </div>
+      </li>
     );
   }
 }

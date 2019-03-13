@@ -1,1 +1,1 @@
-This project for PHONE PAGE
+This is phone App.
