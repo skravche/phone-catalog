@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ProductView.css';
 
 const baseUrl =
-  'https://raw.githubusercontent.com/mate-academy/phone-catalogue-static/master/phones';
+  'https://raw.githubusercontent.com/mate-academy/phone-catalogue-static/master/api/phones';
 const imagesUrl =
   'https://raw.githubusercontent.com/mate-academy/phone-catalogue-static/master/';
 
@@ -40,6 +40,7 @@ class Product extends Component {
         return response.json();
       })
       .then(dataJson => {
+        console.log('datdJ:', dataJson);
         this.setState({ data: dataJson });
       })
       .catch(error => {
@@ -84,7 +85,7 @@ class Product extends Component {
 
   render() {
     const { data, error, mainImg } = this.state;
-
+    console.log(data);
     if (!data) {
       return <div>Loading of data...</div>;
     }

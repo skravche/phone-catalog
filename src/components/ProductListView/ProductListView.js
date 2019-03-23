@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import ProductItem from '../ProductItem';
-import phones from '../Data/phones.json';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/actions';
 
 class ProductList extends Component {
   state = {
     inPhoneName: '',
     filterPhone: 'newest',
   };
+
+  componentDidMount() {
+    this.props.dispatch(actions.getPhoneList());
+  }
 
   replacefilterPhome = e => {
     this.setState({ filterPhone: e.target.value });
@@ -20,6 +25,7 @@ class ProductList extends Component {
   };
 
   render() {
+    const { phones } = this.props;
     const filteredTitles = phoneList =>
       phoneList.name
         .toLowerCase()
@@ -35,7 +41,6 @@ class ProductList extends Component {
             <p>
               Search:
               <input
-                className="selector"
                 type="text"
                 onChange={e => this.setState({ inPhoneName: e.target.value })}
                 value={this.state.inPhoneName}
@@ -75,4 +80,8 @@ class ProductList extends Component {
   }
 }
 
-export default ProductList;
+const mapStateToProps = state => ({
+  phones: state.phones,
+});
+
+export default connect(mapStateToProps)(ProductList);
